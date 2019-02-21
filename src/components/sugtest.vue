@@ -1,14 +1,17 @@
 <template>
   <v-container>
-    <v-card>
-      <v-card-title>Search</v-card-title>
-      <v-card-text>
-        <v-autocomplete v-model="model" :items="states"></v-autocomplete>
-        <v-btn color="success" @click="search">text</v-btn>
-      </v-card-text>
-    </v-card>
+    <v-layout row wrap>
+      <v-flex mt-5>
+        <center>
+          <v-autocomplete v-model="model" :items="states" outline class="ok" label="Search"></v-autocomplete>
+          <v-btn color="primary" @click="search" fab>
+            <v-icon dark>search</v-icon>
+          </v-btn>
+        </center>
+      </v-flex>
+    </v-layout>
     <v-layout row wrap mt-4>
-      <v-flex xs6 v-for="lp in result" :key="lp.model">
+      <v-flex xs6 v-for="lp in result" :key="lp.model" mt-5 pt-5>
         <v-card>
           <v-card-media class="red--text" v-bind:src="lp.img" height="200px">
             <v-container fill-height fluid>

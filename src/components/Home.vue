@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-btn outline round color="indigo" @click="getLaptopInfo('all')">All</v-btn>
-      <v-btn outline round color="indigo" @click="getLaptopInfo('Gaming')">Gamming</v-btn>
+      <v-btn outline round color="indigo" @click="getLaptopInfo('Gaming')">Gaming</v-btn>
       <v-btn outline round color="indigo" @click="getLaptopInfo('Editor')">Editing</v-btn>
       <v-btn outline round color="indigo" @click="getLaptopInfo('Design')">Designer</v-btn>
       <v-btn outline round color="indigo" @click="getLaptopInfo('Developer')">Programming</v-btn>
@@ -58,7 +58,7 @@
                       <span>Gmemory:</span>
                       <span class="red--text">{{lp.gmemory}}</span>
                       <br>
-                      <span>Display gype:</span>
+                      <span>Graphic type:</span>
                       <span class="red--text">{{lp.gype}}</span>
                       <br>
                       <span>OS:</span>
@@ -136,4 +136,3 @@ export default {
   padding: 2px 4px 2px 4px;
 }
 </style>
-
