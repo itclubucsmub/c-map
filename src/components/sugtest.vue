@@ -110,8 +110,6 @@ export default {
     getLaptopInfo: function() {
       this.result = [];
       var query = firebase.firestore().collection("laptop");
-      query = query.where("category", "==", this.interVal.category);
-      query = query.where("ram", "==", this.interVal.ram);
       query = query.where("os", "==", this.interVal.os);
       query.get().then(snapshot => {
         snapshot.forEach(doc => {
@@ -125,7 +123,7 @@ export default {
 
 <style>
 .brandbg {
-  background: #fff;
+  background-color: none;
   padding: 2px 4px 2px 4px;
 }
 </style>

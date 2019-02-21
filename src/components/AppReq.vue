@@ -56,7 +56,7 @@
             <v-btn color="primary" @click="e6 = 5">Continue</v-btn>
           </v-stepper-content>
 
-           <v-stepper-step :complete="e6 > 5" step="5" editable>img</v-stepper-step>
+          <v-stepper-step :complete="e6 > 5" step="5" editable>img</v-stepper-step>
 
           <v-stepper-content step="5">
             <v-layout row wrap>

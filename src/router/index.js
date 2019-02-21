@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import User from '../components/User.vue'
 import Admin from '../components/Admin.vue'
 import AppReq from '../components/AppReq.vue'
 import sugtest from '../components/sugtest'
@@ -10,7 +9,7 @@ Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
-    component: User
+    component: Home
 }, {
     path: '/admin',
     component: Admin
@@ -20,9 +19,6 @@ const routes = [{
 }, {
     path: '/sugtest',
     component: sugtest
-}, {
-    path: '/home',
-    component: Home
 }
 ]
 
