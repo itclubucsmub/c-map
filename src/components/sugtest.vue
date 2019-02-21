@@ -3,8 +3,8 @@
     <v-layout row wrap>
       <v-flex mt-5>
         <center>
-          <v-autocomplete v-model="model" :items="states" outline class="ok" label="Search"></v-autocomplete>
-          <v-btn color="primary" @click="search" fab>
+          <v-autocomplete v-model="model" :items="states" outline label="Search"></v-autocomplete>
+          <v-btn color="primary" @click="search" fab id="btn">
             <v-icon dark>search</v-icon>
           </v-btn>
         </center>
@@ -78,6 +78,7 @@
 <script>
 import firebase from "firebase/app";
 import firestore from "../firebase/firestore";
+import { scrollTo } from "scroll-js";
 export default {
   data() {
     return {
@@ -85,7 +86,8 @@ export default {
       model: "",
       interVal: {},
       query: {},
-      result: []
+      result: [],
+      offsetTop: 0
     };
   },
   mounted() {
@@ -119,6 +121,9 @@ export default {
           this.result.push(doc.data());
         });
       });
+    },
+    scroll: function() {
+      scrollTo(document.body, { top: 1500 });
     }
   }
 };
@@ -128,8 +133,5 @@ export default {
 .brandbg {
   background-color: none;
   padding: 2px 4px 2px 4px;
-}
-.scroll {
-  overflow-y: auto;
 }
 </style>
